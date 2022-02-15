@@ -15,9 +15,9 @@ describe ('should render AppHeader component', () => {
 		const wrapper = component.find('.app__header')
 		expect(wrapper.length).toBe(1)
 	})
-	
+
 	it ('should contain NavLink elements', () => {
-		const wrapper = component.find('NavLink')
-		expect(wrapper.length).toBe(2)
+		const navLink = component.find('NavLink')
+		expect(navLink.length).toBe(2)
 	})  
 })
