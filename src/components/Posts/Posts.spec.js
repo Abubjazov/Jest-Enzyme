@@ -1,5 +1,4 @@
 import React from 'react'
-import { render, shallow } from 'enzyme'
 import { Posts } from '..'
 
 describe('Posts component', () => {
