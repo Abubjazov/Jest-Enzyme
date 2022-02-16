@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Post = ({ author, created_at, num_comments, title, points, url }) => (
+export const Post = ({ author, created_at, num_comments, title, points, url }) => (
   <li className='post'>
     <div className='description'>
       <a href={url} className='title'>
@@ -34,5 +34,3 @@ Post.defaultProps = {
   points: 0,
   url: '#'
 }
-
-export default Post

@@ -23,7 +23,7 @@ const news = [
   }
 ]
 
-const Posts = () => (
+export const Posts = () => (
   <ul className='newsList'>
     {news.map(
       ({ author, created_at, num_comments, objectID, title, points, url }) => (
@@ -40,5 +40,3 @@ const Posts = () => (
     )}
   </ul>
 )
-
-export default Posts
