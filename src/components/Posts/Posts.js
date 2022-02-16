@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import Post from '../Post/post'
 
@@ -7,7 +7,7 @@ const news = [
     author: 'Yauhen',
     created_at: '2020-05-03T23:36:09.816Z',
     num_comments: 10,
-    objectID: 1,
+    objectID: 0,
     title: 'Jest & Enzyme',
     points: 100,
     url: '//test.url'
@@ -16,12 +16,12 @@ const news = [
     author: 'Stepan',
     created_at: '2020-05-05T23:36:09.816Z',
     num_comments: 8,
-    objectID: 2,
+    objectID: 1,
     title: 'TypeScript Basics',
     points: 10,
     url: '//test2121.url'
   }
-];
+]
 
 const Posts = () => (
   <ul className='newsList'>
