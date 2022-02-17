@@ -30,13 +30,13 @@ describe('Posts component', () => {
       expect(component.state().hitsPerPage).toBe(DEFAULT_PAGE)
     })
 
-    it('should handle change page if "Enter" clicked', () => {
+    it('should handle change page if "Enter" pressed', () => {
       instance.setState({ page: DEFAULT_PAGE })
       instance.getSearch({ key: 'Enter' })
       expect(component.state().page).toBe(0)
     })
 
-    it('should not change page if "a" button clicked', () => {
+    it('should not change page if "a" button pressed', () => {
       instance.setState({ page: DEFAULT_PAGE })
       instance.getSearch({ key: 'a' })
       expect(component.state().page).toBe(DEFAULT_PAGE)
