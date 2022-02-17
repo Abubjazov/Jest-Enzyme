@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const Pagination = (onClick, page, lastPage) => {
+const renderPaginationBtns = (onClick, page, lastPage) => {
   const startBtns = [page, page + 1, page + 2]
   const gapBtns = [page - 2, page - 1, page]
   const middleBtn = ['...']
@@ -14,9 +14,9 @@ export const Pagination = (onClick, page, lastPage) => {
   } else if (page < lastPage - 4) {
     btnsArr = [...gapBtns, ...middleBtn, ...lastBtns]
   } else if (page < lastPage - 3) {
-    btnsArr = [...gapBtns, ...lastBtns];// last 6 pages
+    btnsArr = [...gapBtns, ...lastBtns]
   } else {
-    btnsArr = [...middleBtn, ...lastBtns] // last 3 pages
+    btnsArr = [...middleBtn, ...lastBtns]
   }
 
   return btnsArr.map((num) => {
@@ -35,7 +35,7 @@ export const Pagination = (onClick, page, lastPage) => {
   })
 }
 
-const Pagination = ({ onClick, page, lastPage }) => (
+export const Pagination = ({ onClick, page, lastPage }) => (
   <div className='paginationWrapper'>
     {page !== 0 && (
       <button onClick={onClick} data-name='prev'>

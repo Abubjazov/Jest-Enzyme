@@ -9,7 +9,6 @@ import {
 } from '..'
 
 import {
-  NEWS,
   HITS,
   BASE_PATH,
   SEARCH_PATH,
