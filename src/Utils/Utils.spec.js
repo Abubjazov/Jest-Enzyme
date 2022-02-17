@@ -16,39 +16,29 @@ describe('trimString util', () => {
     expect(trimString('     ', 4)).toBe('     ')
     expect(trimString(null, 4)).toBeNull()
     expect(trimString(undefined, 4)).toBeUndefined()
-    // expect(trimString(12345, 4)).toBe("1234...")
   })
 })
 
 describe('getIsValidNumber util', () => {
   it('Positive checking cases', () => {
-    const numbers = [1, 0, -1, 0.5, '123', '321asd']
-
-    for (let int = 1; int < numbers.length; int++) {
-      expect(getIsValidNumber(numbers[int])).toBeTruthy()
-    }
+		[1, 0, -1, 0.5, '123', '321asd']
+			.forEach(item => expect(getIsValidNumber(item)).toBeTruthy())
   })
 
   it('Negative checking cases', () => {
-    const notNumbers = ['asd321', 'qwe', Infinity, undefined, null, [], {}]
-
-    for (let int = 1; int < notNumbers.length; int++) {
-      expect(getIsValidNumber(notNumbers[int])).toBeFalsy()
-    }
+    ['asd321', 'qwe', Infinity, undefined, null, [], {}]
+			.forEach(item => expect(getIsValidNumber(item)).toBeFalsy())
   })
 })
 
 describe('removeObjPropImmutably util', () => {
-  it('Positive removing', () => {
+  it('Positive removing cases', () => {
     expect(removeObjPropImmutably({ a: 1, b: 2 }, 'b')).toMatchObject({ a: 1 })
     expect(removeObjPropImmutably({ a: () => {}, b: 2 }, 'a')).toMatchObject({ b: 2 })
   })
 
-  it('Negative checking cases', () => {
-    const notValidObjects = [undefined, null, [], {}, 'string', 1]
-
-    for (let int = 1; int < notValidObjects.length; int++) {
-      expect(removeObjPropImmutably(notValidObjects[int])).toMatchObject({})
-    }
+  it('Negative removing cases', () => {
+    [undefined, null, [], {}, 'string', 1]
+			.forEach(item => expect(removeObjPropImmutably(item)).toMatchObject({}))
   })
 })
