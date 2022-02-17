@@ -19,6 +19,7 @@ describe('Counter component', () => {
   describe('Counter handlers', () => {
     it('should change count value to plus 1', () => {
       const btn = component.find('.plusOneBtn')
+
       btn.simulate('click')
       // expect(component).toMatchSnapshot()
       expect(component.state().count).toBe(1)
@@ -26,6 +27,7 @@ describe('Counter component', () => {
 
     it('should reset count value to 10', () => {
       const btn = component.find('.resetBtn')
+
       btn.simulate('click')
       expect(component.state().count).toBe(10)
     })
