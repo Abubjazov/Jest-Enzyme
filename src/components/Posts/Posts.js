@@ -1,31 +1,11 @@
 import React from 'react'
 
 import { Post } from '..'
-
-const news = [
-  {
-    author: 'Yauhen',
-    created_at: '2020-05-03T23:36:09.816Z',
-    num_comments: 10,
-    objectID: 0,
-    title: 'Jest & Enzyme',
-    points: 100,
-    url: '//test.url'
-  },
-  {
-    author: 'Stepan',
-    created_at: '2020-05-05T23:36:09.816Z',
-    num_comments: 8,
-    objectID: 1,
-    title: 'TypeScript Basics',
-    points: 10,
-    url: '//test2121.url'
-  }
-]
+import { NEWS } from '../constants/constants'
 
 export const Posts = () => (
   <ul className='newsList'>
-    {news.map(
+    {NEWS.map(
       ({ author, created_at, num_comments, objectID, title, points, url }) => (
         <Post
           key={objectID}
