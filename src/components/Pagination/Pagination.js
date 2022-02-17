@@ -15,11 +15,13 @@ const renderPaginationBtns = (onClick, page, lastPage) => {
     btnsArr = [...gapBtns, ...middleBtn, ...lastBtns]
   } else if (page < lastPage - 3) {
     btnsArr = [...gapBtns, ...lastBtns]
+  } else if (page === 0 && lastPage === 0) {
+    btnsArr = []
   } else {
     btnsArr = [...middleBtn, ...lastBtns]
   }
 
-  return btnsArr.map((num) => {
+  return btnsArr.map(num => {
     return num === '...' ? (
       num
     ) : (

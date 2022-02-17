@@ -239,31 +239,6 @@ exports[`Pagination component should render Pagination without props 1`] = `
 <div
   className="paginationWrapper"
 >
-  ...
-  <button
-    className=""
-    data-name={-3}
-    key="-3"
-    onClick={[Function]}
-  >
-    -3
-  </button>
-  <button
-    className=""
-    data-name={-2}
-    key="-2"
-    onClick={[Function]}
-  >
-    -2
-  </button>
-  <button
-    className=""
-    data-name={-1}
-    key="-1"
-    onClick={[Function]}
-  >
-    -1
-  </button>
   <button
     data-name="next"
     onClick={[Function]}
