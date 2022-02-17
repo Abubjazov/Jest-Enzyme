@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { Post, Title, Select, Input } from ".."
 
-import { NEWS, HITS } from '../constants/constants'
+import { NEWS, HITS } from '../constants/postConstants'
 
 export class Posts extends Component {
   state = {
